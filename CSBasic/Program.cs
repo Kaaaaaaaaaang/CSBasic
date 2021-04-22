@@ -68,6 +68,43 @@ namespace CSBasic
             Console.WriteLine("미림여자정보과학고\t등학교");
             Console.WriteLine("미림여자정보과학고등학\t교");
 
+            // 문자열 연결 연산자
+            // concat concatentae operator
+            // concatenation operator
+            Console.WriteLine("ABC" + "DEF");
+            Console.WriteLine('A' + 'E');
+            Console.WriteLine("ABC" + 'E');
+
+            Console.WriteLine("ABC"[2]);
+
+            Console.WriteLine("ABC"[3]);
+
+            // bool
+            bool isPlay = true;
+            bool isDeath = false;
+
+            // comparison operator
+            Console.WriteLine(52 == 163);
+            Console.WriteLine(52 != 163);
+            Console.WriteLine(52 > 163);
+            Console.WriteLine(52 < 163);
+            Console.WriteLine(52 >= 163);
+            Console.WriteLine(52 <= 163);
+
+            // Logic operator
+            Console.WriteLine(!(true));
+            Console.WriteLine(true || false);
+            Console.WriteLine(true && false);
+
+            // 단항 연산자 - unary operator
+            int i = 0;
+            i++;
+            // 이항 연산자 - binary operator
+            i = i + 2;
+            // 삼항 연산자 - ternary operator
+            int j;
+            j = (i > 3) ? 0 : 1;
+
         }
     }
 }
