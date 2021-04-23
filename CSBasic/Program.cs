@@ -105,6 +105,15 @@ namespace CSBasic
             int j;
             j = (i > 3) ? 0 : 1;
 
+
+            //복합 대입 연산자
+            int output = 0;
+            output += 52;
+            output = output + 52;
+            output *= 10;
+            output = output * 10;
+            Console.WriteLine(output);
+
         }
     }
 }
