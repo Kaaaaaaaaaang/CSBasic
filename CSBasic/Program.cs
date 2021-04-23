@@ -114,6 +114,14 @@ namespace CSBasic
             output = output * 10;
             Console.WriteLine(output);
 
+            //증감 연산자 - 섞어서 쓸 경우
+            //전위, 후위에 따라서 출력값이 바뀐다
+            int num = 10;
+            Console.WriteLine(num++);
+            Console.WriteLine(num--);
+            Console.WriteLine(++num);
+            Console.WriteLine(--num);
+
         }
     }
 }
