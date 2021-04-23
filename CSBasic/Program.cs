@@ -9,6 +9,8 @@ namespace CSBasic
     class Program
     {
         
+        // var something = "blahblah";
+
         static void Main(string[] args)
         {
             // keyword
@@ -141,6 +143,13 @@ namespace CSBasic
             Console.WriteLine(_double.GetType());
             Console.WriteLine(_char.GetType());
             Console.WriteLine(_string.GetType());
+
+            var somea = "마음에 드는 문자열";
+            var someb = 42;
+            var somec = 3.1415926;
+            Console.WriteLine(somea.GetType());
+            Console.WriteLine(someb.GetType());
+            Console.WriteLine(somec.GetType());
 
         }
     }
