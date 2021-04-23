@@ -79,7 +79,7 @@ namespace CSBasic
 
             Console.WriteLine("ABC"[2]);
 
-            Console.WriteLine("ABC"[3]);
+            // Console.WriteLine("ABC"[3]);
 
             // bool
             bool isPlay = true;
@@ -151,6 +151,21 @@ namespace CSBasic
             Console.WriteLine(someb.GetType());
             Console.WriteLine(somec.GetType());
 
+            bool isLoop = true;
+            string input;
+            while(isLoop)
+            {
+                Console.Write("입력 >>> ");
+                input = Console.ReadLine();
+                if(input.Equals("q"))
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine(input);
+                }
+            }
         }
     }
 }
