@@ -134,7 +134,13 @@ namespace CSBasic
             double _double = 52.273;
             char _char = '귤';
             string _string = "문자열";
-            
+
+            Console.WriteLine(_int.GetType());
+            Console.WriteLine(_long.GetType());
+            Console.WriteLine(_float.GetType());
+            Console.WriteLine(_double.GetType());
+            Console.WriteLine(_char.GetType());
+            Console.WriteLine(_string.GetType());
 
         }
     }
