@@ -166,6 +166,32 @@ namespace CSBasic
                     Console.WriteLine(input);
                 }
             }
+
+            var a1 = (int)10.0;
+            var a2 = (float)10;
+            var a3 = (double)10;
+
+            Console.WriteLine(a1);
+            Console.WriteLine(a2);
+            Console.WriteLine(a3);
+
+            long longNumber = 2147483637L + 21000000000L;
+            int intNumber = (int)longNumber;
+            Console.WriteLine(intNumber);
+
+            long longNumber2 = 52773;
+            int intNumber2 = (int)longNumber2;
+            Console.WriteLine(intNumber2);
+
+            Console.WriteLine(int.MaxValue);
+            Console.WriteLine(long.MaxValue);
+            Console.WriteLine(float.MaxValue);
+            Console.WriteLine(double.MaxValue);
+
+            Console.WriteLine(int.Parse("652"));
+            Console.WriteLine(long.Parse("273"));
+            Console.WriteLine(double.Parse("10.0"));
+            Console.WriteLine(float.Parse("10.0"));
         }
     }
 }
