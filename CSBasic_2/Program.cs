@@ -73,6 +73,15 @@ namespace CSBasic_2
                     Console.WriteLine("대체 어떤 행성에 살고 계신가요?");
                     break;
             }
+
+            string input2 = Console.ReadLine();
+            int number = int.Parse(input2);
+
+            Console.WriteLine(number % 2 == 0 ? true : false);
+            Console.WriteLine(number % 2 == 0 ? "짝수" : "홀수");
+
+            Console.WriteLine(number > 0 ? "자연수입니다" : "자연수가아닙니다");
+
         }
     }
 }
