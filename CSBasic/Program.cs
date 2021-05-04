@@ -182,7 +182,6 @@ namespace CSBasic
             long longNumber2 = 52773;
             int intNumber2 = (int)longNumber2;
             Console.WriteLine(intNumber2);
-
             Console.WriteLine(int.MaxValue);
             Console.WriteLine(long.MaxValue);
             Console.WriteLine(float.MaxValue);
