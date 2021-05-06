@@ -82,6 +82,37 @@ namespace CSBasic_2
 
             Console.WriteLine(number > 0 ? "자연수입니다" : "자연수가아닙니다");
 
+            Console.Write("입력 : ");
+            String line = Console.ReadLine();
+
+            if(line.Contains("안녕"))
+            {
+                Console.WriteLine("안녕하세요...!");
+            }
+            else
+            {
+                Console.WriteLine("^^");
+            }
+
+            ConsoleKeyInfo info = Console.ReadKey();
+            switch(info.Key)
+            {
+                case ConsoleKey.UpArrow:
+                    Console.WriteLine("위로 이동");
+                    break;
+                case ConsoleKey.RightArrow:
+                    Console.WriteLine("오른쪽으로 이동");
+                    break;
+                case ConsoleKey.DownArrow:
+                    Console.WriteLine("아래로 이동");
+                    break;
+                case ConsoleKey.LeftArrow:
+                    Console.WriteLine("왼쪽으로 이동");
+                    break;
+                default:
+                    Console.WriteLine("다른 키를 눌렀습니다.");
+                    break;
+            }
         }
     }
 }
