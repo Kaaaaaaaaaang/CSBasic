@@ -113,6 +113,14 @@ namespace CSBasic_2
                     Console.WriteLine("다른 키를 눌렀습니다.");
                     break;
             }
+
+            int[] intArray = { 52, 273, 32, 65, 103 };
+            for(int i=0; i<5; i++)
+            {
+                Console.WriteLine(intArray[i]);
+            }
+
+            int[] intArray2 = new int[100];
         }
     }
 }
