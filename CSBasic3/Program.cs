@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace CSBasic3
 {
@@ -118,6 +119,97 @@ namespace CSBasic3
                 if(e%2 == 0)
                 {
                     Console.WriteLine(e);
+                }
+            }
+
+            string str = "Potato Tomato";
+            Console.WriteLine(str.ToUpper());
+            Console.WriteLine(str.ToLower());
+
+            string kor = "감자 고구마 토마토";
+            string[] inputs = kor.Split(new char[] { ' ' });
+            foreach(var item in inputs)
+            {
+                Console.WriteLine(item);
+            }
+
+            string str2 = "test     \n";
+            Console.WriteLine("::" + str2.Trim() + "::");
+            Console.Read();
+
+            string[] array2 = { "감자", "고구마", "토마토", "가지" };
+            Console.WriteLine(string.Join(",", array));
+
+            Console.Write("메서드 호출 전");
+            Console.SetCursorPosition(5, 5);
+            Console.Write("메서드 호출 후");
+
+            Console.WriteLine("첫 번째 출력");
+            Thread.Sleep(1000);
+            Console.WriteLine("두 번째 출력");
+            Thread.Sleep(1000);
+            Console.WriteLine("세 번째 출력");
+
+            int x = 1;
+            while(x<50)
+            {
+                Console.Clear();
+                Console.SetCursorPosition(x, 5);
+
+                if (x % 3 == 0)
+                    Console.WriteLine("__0");
+                else if (x % 3 == 1)
+                    Console.WriteLine("_^0");
+                else
+                    Console.WriteLine("^_0");
+
+                Thread.Sleep(1000);
+                x++;
+            }
+
+            while(true)
+            {
+                ConsoleKeyInfo info = Console.ReadKey();
+                switch(info.Key)
+                {
+                    case ConsoleKey.UpArrow:
+                        Console.WriteLine("위로 이동");
+                        break;
+                    case ConsoleKey.RightArrow:
+                        Console.WriteLine("오른쪽으로 이동");
+                        break;
+                    case ConsoleKey.DownArrow:
+                        Console.WriteLine("아래로 이동");
+                        break;
+                    case ConsoleKey.LeftArrow:
+                        Console.WriteLine("왼쪽으로 이동");
+                        break;
+                    case ConsoleKey.X:
+                        break;
+                }
+            }
+
+            bool state = true;
+            while (state)
+            {
+                ConsoleKeyInfo info = Console.ReadKey();
+                switch (info.Key)
+                {
+                    case ConsoleKey.UpArrow:
+                        Console.WriteLine("위로 이동");
+                        break;
+                    case ConsoleKey.RightArrow:
+                        Console.WriteLine("오른쪽으로 이동");
+                        break;
+                    case ConsoleKey.DownArrow:
+                        Console.WriteLine("아래로 이동");
+                        break;
+                    case ConsoleKey.LeftArrow:
+                        Console.WriteLine("왼쪽으로 이동");
+                        break;
+                    case ConsoleKey.X:
+                        state = false;
+                        break;
                 }
             }
         }
