@@ -29,11 +29,41 @@ namespace CSBasic4
     {
 
     }
+    class User
+    {
+        public string name;
+        public string password;
+        public string address;
+        public string phoneNumber;
+        public DateTime regDate;
+    }
 
     class Program
     {
+        class Product
+        {
+            public string name = "default";
+            public int price = 1000;
+        }
+        class MyMath
+        {
+            public static double PI = 3.141592;
+        }
+
         static void Main(string[] args)
         {
+            Console.WriteLine(MyMath.PI);
+
+            Product product = new Product();
+
+            product.name = "감자";
+            product.price = 2000;
+
+            Console.WriteLine(product.name + " : " + product.price + "원");
+
+            Product productA = new Product() { name = "감자", price = 2000 };
+            Product productB = new Product() { name = "고구마", price = 3000 };
+
             // Car[] cars = new Car[10];
             Car car = new Car();
             car.SetInTime();
