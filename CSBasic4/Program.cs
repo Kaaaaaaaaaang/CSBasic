@@ -148,16 +148,16 @@ namespace CSBasic4
             long[] longArray = new long[10];
             string[] stringArray = new string[10];
 
-            List<int> list = new List<int>();
+            List<int> list3 = new List<int>();
 
-            list.Add(52);
-            list.Add(273);
-            list.Add(32);
-            list.Add(64);
+            list3.Add(52);
+            list3.Add(273);
+            list3.Add(32);
+            list3.Add(64);
 
-            foreach(var item in list)
+            foreach(var item in list3)
             {
-                Console.WriteLine("Count : " + list.Count + "\titem : " + item);
+                Console.WriteLine("Count : " + list3.Count + "\titem : " + item);
             }
 
             Console.WriteLine(Math.Abs(-52273));
