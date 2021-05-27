@@ -14,6 +14,11 @@ namespace CSBasic4
         public string major;
         public DateTime birthday;
     }
+    class Student2
+    {
+        public string name;
+        public int grade;
+    }
     class Car
     {
         int carNumber;
@@ -60,6 +65,55 @@ namespace CSBasic4
 
         static void Main(string[] args)
         {
+            List<Student2> list = new List<Student2>();
+
+            list.Add(new Student2() { name = "윤인성", grade = 1 });
+            list.Add(new Student2() { name = "연하진", grade = 2 });
+            list.Add(new Student2() { name = "윤아린", grade = 3 });
+            list.Add(new Student2() { name = "윤명월", grade = 4 });
+            list.Add(new Student2() { name = "구지연", grade = 1 });
+            list.Add(new Student2() { name = "김연화", grade = 2 });
+
+            foreach (var item in list)
+            {
+                Console.WriteLine(item.name + " : " + item.grade);
+            }
+
+            List<Student2> list2 = new List<Student2>()
+            {
+                new Student2() { name = "윤인성", grade = 1 },
+                new Student2() { name = "연하진", grade = 2 },
+                new Student2() { name = "윤아린", grade = 3 },
+                new Student2() { name = "윤명월", grade = 4 },
+                new Student2() { name = "구지연", grade = 1 },
+                new Student2() { name = "김연화", grade = 2 }
+
+            };
+
+            // 오류 발생 => foreach 반복문을 사용해서는 요소 제거를 할 수 없다.
+            /*
+            foreach (var item in list)
+            {
+                if(item.grade > 1)
+                {
+                    list.Remove(item);
+                }
+            }
+            */
+
+            for(int i=0; i<list.Count-1; i++)
+            {
+                if(list[i].grade > 1)
+                {
+                    list.RemoveAt(i);
+                }
+            }
+
+            foreach (var item in list)
+            {
+                Console.WriteLine(item.name + " : " + item.grade);
+            }
+
             Console.WriteLine(MyMath.PI);
 
             Product product = new Product();
