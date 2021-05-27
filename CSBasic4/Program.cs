@@ -6,6 +6,14 @@ using System.Threading.Tasks;
 
 namespace CSBasic4
 {
+    class Studnet
+    {
+        public string id;
+        public string name;
+        public int grade;
+        public string major;
+        public DateTime birthday;
+    }
     class Car
     {
         int carNumber;
