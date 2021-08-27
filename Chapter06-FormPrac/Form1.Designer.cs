@@ -1,4 +1,5 @@
-﻿namespace Chapter6_FormPrac
+﻿
+namespace Chapter6_FormPrac
 {
     partial class Form1
     {
@@ -6,6 +7,7 @@
         /// 필수 디자이너 변수입니다.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+
         /// <summary>
         /// 사용 중인 모든 리소스를 정리합니다.
         /// </summary>
@@ -18,17 +20,20 @@
             }
             base.Dispose(disposing);
         }
+
         #region Windows Form 디자이너에서 생성한 코드
+
         /// <summary>
         /// 디자이너 지원에 필요한 메서드입니다. 
         /// 이 메서드의 내용을 코드 편집기로 수정하지 마세요.
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.btnMessageBox1 = new System.Windows.Forms.Button();
             this.btnMessageBox2 = new System.Windows.Forms.Button();
             this.btnMessageBox3 = new System.Windows.Forms.Button();
+            this.btnModeless = new System.Windows.Forms.Button();
+            this.btnModal = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnMessageBox1
@@ -61,12 +66,33 @@
             this.btnMessageBox3.UseVisualStyleBackColor = true;
             this.btnMessageBox3.Click += new System.EventHandler(this.btnMessageBox1_Click);
             // 
+            // btnModeless
+            // 
+            this.btnModeless.Location = new System.Drawing.Point(192, 12);
+            this.btnModeless.Name = "btnModeless";
+            this.btnModeless.Size = new System.Drawing.Size(145, 64);
+            this.btnModeless.TabIndex = 3;
+            this.btnModeless.Text = "모달리스 창 열기";
+            this.btnModeless.UseVisualStyleBackColor = true;
+            this.btnModeless.Click += new System.EventHandler(this.btnModeless_Click);
+            // 
+            // btnModal
+            // 
+            this.btnModal.Location = new System.Drawing.Point(192, 82);
+            this.btnModal.Name = "btnModal";
+            this.btnModal.Size = new System.Drawing.Size(145, 57);
+            this.btnModal.TabIndex = 4;
+            this.btnModal.Text = "모달 창 열기";
+            this.btnModal.UseVisualStyleBackColor = true;
+            this.btnModal.Click += new System.EventHandler(this.btnModeless_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
             this.ClientSize = new System.Drawing.Size(349, 157);
+            this.Controls.Add(this.btnModal);
+            this.Controls.Add(this.btnModeless);
             this.Controls.Add(this.btnMessageBox3);
             this.Controls.Add(this.btnMessageBox2);
             this.Controls.Add(this.btnMessageBox1);
@@ -81,5 +107,8 @@
         private System.Windows.Forms.Button btnMessageBox1;
         private System.Windows.Forms.Button btnMessageBox2;
         private System.Windows.Forms.Button btnMessageBox3;
+        private System.Windows.Forms.Button btnModeless;
+        private System.Windows.Forms.Button btnModal;
     }
 }
+

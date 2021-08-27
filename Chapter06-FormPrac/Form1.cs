@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 namespace Chapter6_FormPrac
 {
     public partial class Form1 : Form
@@ -23,14 +24,12 @@ namespace Chapter6_FormPrac
             if (sender == btnMessageBox1)
             {
                 result = MessageBox.Show("안녕하세요?");
-            }
-            else if (sender == btnMessageBox2)
+            }else if (sender == btnMessageBox2)
             {
                 result = MessageBox.Show("안녕하세요?", "환영인사");
-            }
-            else if (sender == btnMessageBox3)
+            }else if (sender == btnMessageBox3)
             {
-                result = MessageBox.Show("안녕하세요?", "환영인사", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                result = MessageBox.Show("안녕하세요?", "환영인사", MessageBoxButtons.YesNo, MessageBoxIcon.Question );
             }
 
             switch (result)
@@ -42,6 +41,19 @@ namespace Chapter6_FormPrac
                 case DialogResult.No:
                     MessageBox.Show("가서 쉬세요!", "시스템");
                     break;
+            }
+        }
+
+        private void btnModeless_Click(object sender, EventArgs e)
+        {
+            Form form = new FormCustom();
+          
+            if(sender == btnModeless)
+            {
+                form.Show();
+            }else if(sender == btnModal)
+            {
+                form.ShowDialog();
             }
         }
     }
