@@ -15,6 +15,7 @@ namespace Chapter6_FormPrac
         public Form1()
         {
             InitializeComponent();
+            IsMdiContainer = true;
         }
 
         private void btnMessageBox1_Click(object sender, EventArgs e)
@@ -24,12 +25,14 @@ namespace Chapter6_FormPrac
             if (sender == btnMessageBox1)
             {
                 result = MessageBox.Show("안녕하세요?");
-            }else if (sender == btnMessageBox2)
+            }
+            else if (sender == btnMessageBox2)
             {
                 result = MessageBox.Show("안녕하세요?", "환영인사");
-            }else if (sender == btnMessageBox3)
+            }
+            else if (sender == btnMessageBox3)
             {
-                result = MessageBox.Show("안녕하세요?", "환영인사", MessageBoxButtons.YesNo, MessageBoxIcon.Question );
+                result = MessageBox.Show("안녕하세요?", "환영인사", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             }
 
             switch (result)
@@ -47,11 +50,13 @@ namespace Chapter6_FormPrac
         private void btnModeless_Click(object sender, EventArgs e)
         {
             Form form = new FormCustom();
-          
-            if(sender == btnModeless)
+
+            if (sender == btnModeless)
             {
+                form.MdiParent = this;
                 form.Show();
-            }else if(sender == btnModal)
+            }
+            else if (sender == btnModal)
             {
                 form.ShowDialog();
             }
