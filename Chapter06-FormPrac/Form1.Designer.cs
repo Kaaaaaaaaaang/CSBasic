@@ -1,5 +1,4 @@
-﻿
-namespace Chapter6_FormPrac
+﻿namespace Chapter6_FormPrac
 {
     partial class Form1
     {
